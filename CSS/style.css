@@ -100,7 +100,7 @@ hr {
 
 .btn {
   font-size: 1.6rem;
-  padding: 1rem 1rem;
+  padding: 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
   border: 0px;
@@ -139,13 +139,6 @@ hr {
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--gray);
   margin-bottom: 2rem;
-}
-
-/* generic */
-
-.article-author {
-  font-weight: 700;
-  font-size: 1.4rem;
 }
 
 /* header */
@@ -225,12 +218,14 @@ nav {
   overflow: hidden;
 }
 
-.article-small .article-author {
+.article-small .article-author,
+.article-small .text-hint {
   grid-column: span 2;
 }
 
-.article-small .text-hint {
-  grid-column: span 2;
+.article-author {
+  font-weight: 700;
+  font-size: 1.4rem;
 }
 
 /* ads */
@@ -255,7 +250,7 @@ nav {
 
 .ads h1 {
   grid-area: h1;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .ads p {
@@ -280,6 +275,7 @@ nav {
 .content {
   margin: 3rem 0;
   display: flex;
+  align-items: start;
 }
 
 .articles {
@@ -323,4 +319,24 @@ nav {
 
 .popular {
   flex: 350px;
+  padding: 0 3rem;
+  position: sticky;
+  top: 45px;
+}
+
+.popular ul li {
+  display: grid;
+  grid-template-columns: 50px auto;
+  place-items: center center;
+  margin-bottom: 1rem;
+}
+
+.popular ul li div:first-child {
+  font-size: 3rem;
+  color: var(--gray-hint);
+}
+
+.popular ul li p,
+.popular ul li h3 {
+  margin: 0.2rem;
 }
